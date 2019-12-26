@@ -1,0 +1,25 @@
+body {
+  background-color: #0c2233;
+  width: 400px;
+}
+
+.title {
+  padding: 0 5px;
+}
+
+.color-secondary {
+  color: #ffc045;
+}
+
+.info-text-list {
+  padding: 0 20px;
+}
+
+.info-text {
+  color: #0a91ab;
+  padding: 5px;
+}
+
+.container {
+  padding: 20px;;
+}

@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Auto Skip for Netflix and Prime",
+  "author": "Naman Malhotra",
+  "version": "1.0.1",
+  "description": "Auto Skip Intro, Recaps for Netflix and Prime",
+  "icons": {
+    "16": "src/assets/512.png",
+    "48": "src/assets/512.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.netflix.com/*",
+        "https://*.primevideo.com/*"
+      ],
+      "js": [
+        "dist/bundle.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "19": "src/assets/512.png",
+      "38": "src/assets/512.png"
+    },
+    "default_title": "Netflix Prime Auto Skip",
+    "default_popup": "src/popup.html"
+  }
+}
