@@ -1,13 +1,12 @@
 import { secretKey } from '../secret_key';
 import { sendAnalytics } from './utils/analytics';
-import { sleep, fetchDomNode } from './utils/util';
+import { sleep, fetchDomNode, throttle } from './utils/util';
 import { elementMapping } from './element_mapping';
 
 const LOADING_TEXT = 'Skipping...';
 
 async function skipNetflixAndPrime() {
   const skipButton = fetchDomNode(elementMapping);
-
   if(!skipButton) {
     return;
   }
@@ -43,5 +42,16 @@ async function skipNetflixAndPrime() {
     sendAnalytics(data);
   }
 }
+// setInterval(() =>  skipNetflixAndPrime(), 1000);
 
-setInterval(() =>  skipNetflixAndPrime(), 1000);
+// Testing via mutation obs
+
+const throttledFunction = throttle(skipNetflixAndPrime, 1000);
+
+const config = { attributes: true, childList: true, subtree: true };
+
+const appLevelObserver = new MutationObserver(throttledFunction);
+
+const appLevelTarget = document.querySelector('#appMountPoint');
+
+appLevelObserver.observe(appLevelTarget, config);
