@@ -15,7 +15,6 @@ export function fetchDomNode(elements) {
   }
 }
 
-
 export function throttle(passedFunc, time = 0) {
   let lastTime = 0;
   return function(...args) {

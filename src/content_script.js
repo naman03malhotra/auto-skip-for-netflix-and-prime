@@ -7,6 +7,7 @@ const LOADING_TEXT = 'Skipping...';
 
 async function skipNetflixAndPrime() {
   const skipButton = fetchDomNode(elementMapping);
+
   if(!skipButton) {
     return;
   }
