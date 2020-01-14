@@ -4,6 +4,7 @@ import { sleep, fetchDomNode, throttle } from './utils/util';
 import { elementMapping } from './element_mapping';
 
 const LOADING_TEXT = 'Skipping...';
+let prevSelector = undefined;
 
 async function skipNetflixAndPrime() {
   const skipButton = fetchDomNode(elementMapping);
@@ -15,10 +16,13 @@ async function skipNetflixAndPrime() {
   const { domNode, type, selector } = skipButton;
 
   if(domNode) {
+    if(selector === prevSelector) {
+      return;
+    }
+
     const data = {
       event: "Skipped",
       properties: {
-        time: Date.now(),
         token: secretKey,
         extensionId: chrome.runtime.id,
         distinct_id: chrome.runtime.id,
@@ -40,19 +44,21 @@ async function skipNetflixAndPrime() {
     }
 
     domNode.click();
+
     sendAnalytics(data);
+    prevSelector = selector;
   }
 }
 // setInterval(() =>  skipNetflixAndPrime(), 1000);
 
 // Testing via mutation obs
 
-const throttledFunction = throttle(skipNetflixAndPrime, 1000);
+const throttledFunction = throttle(skipNetflixAndPrime, 1050);
 
 const config = { attributes: true, childList: true, subtree: true };
 
 const appLevelObserver = new MutationObserver(throttledFunction);
 
-const appLevelTarget = document.querySelector('#appMountPoint');
+const appLevelTarget = document.getElementsByTagName('body')[0];
 
 appLevelObserver.observe(appLevelTarget, config);
