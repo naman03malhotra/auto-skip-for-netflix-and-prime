@@ -1,9 +1,12 @@
 import { secretKey } from '../secret_key';
 import { sendAnalytics } from './utils/analytics';
-import { sleep, fetchDomNode } from './utils/util';
-import { elementMapping } from './element_mapping';
-
-const LOADING_TEXT = 'Skipping...';
+import {
+  sleep,
+  fetchDomNode,
+  getInnerText,
+  setInnerText,
+ } from './utils/util';
+import { elementMapping, LOADING_TEXT } from './element_mapping';
 
 async function skipNetflixAndPrime() {
   const skipButton = fetchDomNode(elementMapping);
@@ -15,29 +18,29 @@ async function skipNetflixAndPrime() {
   const { domNode, type, selector } = skipButton;
 
   if(domNode) {
+    const innerText = getInnerText(domNode, type);
+
+    if (innerText.toLowerCase() === LOADING_TEXT.toLowerCase()) {
+      return;
+    }
+
+    if(selector === '.nextUpCard') {
+      await sleep(800);
+    }
+
+    await setInnerText(domNode, type, LOADING_TEXT);
+
     const data = {
       event: "Skipped",
       properties: {
-        time: Date.now(),
         token: secretKey,
         extensionId: chrome.runtime.id,
         distinct_id: chrome.runtime.id,
         selector,
         type,
+        innerTextDatum: innerText,
       },
     };
-
-    if(selector === '.nextUpCard') {
-      await sleep(2000);
-    }
-
-    if (type === 'netflix') {
-      domNode.firstElementChild.innerHTML = LOADING_TEXT;
-      await sleep(500);
-    } else {
-      domNode.innerHTML = LOADING_TEXT;
-      await sleep(1000);
-    }
 
     domNode.click();
     sendAnalytics(data);
