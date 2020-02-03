@@ -34,8 +34,8 @@ async function skipNetflixAndPrime() {
       event: "Skipped",
       properties: {
         token: secretKey,
-        extensionId: chrome.runtime.id,
-        distinct_id: chrome.runtime.id,
+        extensionId: chrome.runtime && chrome.runtime.id ? chrome.runtime.id : 'ID_NOT_PRESENT',
+        distinct_id: chrome.runtime && chrome.runtime.id ? chrome.runtime.id : 'ID_NOT_PRESENT',
         selector,
         type,
         innerTextDatum: innerText,
