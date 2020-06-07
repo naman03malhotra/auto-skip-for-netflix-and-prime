@@ -5,26 +5,26 @@ import {
   fetchDomNode,
   getInnerText,
   setInnerText,
- } from './utils/util';
+} from './utils/util';
 import { elementMapping, LOADING_TEXT } from './element_mapping';
 
 async function skipNetflixAndPrime() {
-  const skipButton = fetchDomNode(elementMapping);
+  let skipButton = fetchDomNode(elementMapping);
 
-  if(!skipButton) {
+  if (!skipButton) {
     return;
   }
 
   const { domNode, type, selector } = skipButton;
 
-  if(domNode) {
+  if (domNode) {
     const innerText = getInnerText(domNode, type);
 
     if (innerText.toLowerCase() === LOADING_TEXT.toLowerCase()) {
       return;
     }
 
-    if(selector === '.nextUpCard') {
+    if (selector === '.nextUpCard') {
       await sleep(800);
     }
 
@@ -47,4 +47,4 @@ async function skipNetflixAndPrime() {
   }
 }
 
-setInterval(() =>  skipNetflixAndPrime(), 1000);
+setInterval(() => skipNetflixAndPrime(), 1000);

@@ -5,10 +5,18 @@ export function sleep(ms) {
 }
 
 export function fetchDomNode(elements) {
-  for(element of elements) {
-    const domNode = document.querySelector(element.selector);
+  for (element of elements) {
+    const { selector, xpath } = element;
+    let domNode;
+    if (!xpath) {
+      domNode = document.querySelector(selector);
+    }
 
-    if(domNode) {
+    if (!domNode && xpath) {
+      domNode = document.evaluate(element.selector, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+    }
+
+    if (domNode) {
       return {
         ...element,
         domNode,

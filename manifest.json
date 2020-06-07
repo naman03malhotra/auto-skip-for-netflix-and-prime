@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Auto Skip Intro for Prime and Netflix (ASPN)",
   "author": "Naman Malhotra",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "description": "Auto Skip Intro, Recaps for Prime and Netflix",
   "icons": {
     "16": "src/assets/512.png",
@@ -31,7 +31,6 @@
         "*://*.netflix.sg/*",
         "*://*.netflix.sk/*",
         "*://*.netflix.es/*",
-
         "https://*.primevideo.com/*",
         "*://*.amazon.com/*",
         "*://amazon.com/*",
