@@ -1,16 +1,18 @@
 {
   "name": "netflix-prime-auto-skip",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Auto Skip Intro, Recaps for Prime and Netflix",
   "source": "src/content_script.js",
   "main": "dist/bundle.js",
   "scripts": {
-    "build": "microbundle -f iife",
-    "dev": "microbundle watch"
+    "build": "rm -rf dist && microbundle -f modern --sourcemap false && npm run post",
+    "dev": "microbundle watch",
+    "post": "mv dist/bundle.modern.js dist/bundle.js",
+    "publish": "rm -rf ../final_build && mkdir ../final_build/ && mkdir ../final_build/src/ && cp -R {manifest.json,dist} ../final_build/ && cp -R src/{assets,popup.html,styles} ../final_build/src/ && cd .. && zip -r final_build_$npm_package_version.zip final_build"
   },
   "author": "Naman Malhotra",
   "license": "ISC",
   "devDependencies": {
-    "microbundle": "0.11.0"
+    "microbundle": "0.12.0"
   }
 }

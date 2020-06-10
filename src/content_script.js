@@ -15,7 +15,7 @@ async function skipNetflixAndPrime() {
     return;
   }
 
-  const { domNode, type, selector } = skipButton;
+  const { domNode, type, selector, extraWait } = skipButton;
 
   if (domNode) {
     const innerText = getInnerText(domNode, type);
@@ -24,7 +24,7 @@ async function skipNetflixAndPrime() {
       return;
     }
 
-    if (selector === '.nextUpCard') {
+    if (extraWait) {
       await sleep(800);
     }
 

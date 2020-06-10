@@ -29,4 +29,13 @@ export const elementMapping = [{
   type: PRIME,
   selector: "//div[text()='Skip Recap']",
   xpath: true
+}, {
+  type: PRIME,
+  selector: "//div[text()='Skip']",
+  xpath: true
+}, {
+  type: PRIME,
+  selector: "//div[text()='Next Up']/parent::div/following-sibling::div",
+  xpath: true,
+  extraWait: true,
 }];
