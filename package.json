@@ -8,7 +8,8 @@
     "build": "rm -rf dist && microbundle -f modern --sourcemap false && npm run post",
     "dev": "microbundle watch",
     "post": "mv dist/bundle.modern.js dist/bundle.js",
-    "publish": "rm -rf ../final_build && mkdir ../final_build/ && mkdir ../final_build/src/ && cp -R {manifest.json,dist} ../final_build/ && cp -R src/{assets,popup.html,styles} ../final_build/src/ && cd .. && zip -r final_build_$npm_package_version.zip final_build"
+    "publish": "rm -rf ../final_build && mkdir ../final_build/ && mkdir ../final_build/src/ && cp -R {manifest.json,dist} ../final_build/ && cp -R src/{assets,popup.html,styles} ../final_build/src/ && cd .. && zip -r final_build_$npm_package_version.zip final_build",
+    "final": "npm run build && npm run publish"
   },
   "author": "Naman Malhotra",
   "license": "ISC",
