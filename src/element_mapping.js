@@ -8,10 +8,16 @@ export const elementMapping = [{
   selector: "[aria-label='Skip Intro']",
 }, {
   type: NETFLIX,
+  selector: ".skip-credits > a",
+}, {
+  type: NETFLIX,
   selector: "[aria-label='Skip Recap']",
 }, {
   type: NETFLIX,
   selector: "[aria-label='Continue Playing']",
+}, {
+  type: NETFLIX,
+  selector: ".interrupter-actions > .nf-icon-button:first-child",
 }, {
   type: PRIME,
   selector: ".skipElement",
