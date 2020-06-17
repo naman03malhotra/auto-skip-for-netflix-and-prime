@@ -1,6 +1,6 @@
 # Auto Skip for Prime and NetFlix (ASPN)
 
-![Chrome Web Store](https://img.shields.io/chrome-web-store/users/geikbfhmddindncdioecbgpehlhencaj?color=brightgreen)
+![Chrome Web Store](https://img.shields.io/chrome-web-store/users/geikbfhmddindncdioecbgpehlhencaj?color=g&label=Chrome%20Store%20Users)
 
 Auto Skip Intro, Recaps for Prime and NetFlix
 
