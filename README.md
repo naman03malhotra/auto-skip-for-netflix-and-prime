@@ -1,5 +1,7 @@
 # Auto Skip for Prime and NetFlix (ASPN)
 
+![Chrome Web Store](https://img.shields.io/chrome-web-store/users/geikbfhmddindncdioecbgpehlhencaj?color=g&label=Chrome%20Store%20Users)
+
 Auto Skip Intro, Recaps for Prime and NetFlix
 
 It is very tedious to skip those long intro sequences and recaps on Netflix and Amazon Prime, you have to press the skip button each time.
