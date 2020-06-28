@@ -1,5 +1,5 @@
 function toBase64(data) {
-  return btoa(JSON.stringify(data));
+  return btoa(unescape(encodeURIComponent(JSON.stringify(data))));
 }
 
 async function sendData(data) {
