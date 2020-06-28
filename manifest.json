@@ -540,6 +540,9 @@
     ],
     "persistent": false
   },
+  "permissions": [
+    "storage"
+  ],
   "browser_action": {
     "default_icon": {
       "19": "src/assets/512.png",
