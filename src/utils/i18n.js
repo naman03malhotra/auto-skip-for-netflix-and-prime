@@ -3,6 +3,11 @@ export const SKIP_RECAP = "skip_recap";
 export const NEXT_EPISODE = "next_epi";
 export const SKIP_ADS = "skip_ads";
 
+export const LOADING_TEXT = 'Skipping...';
+
+export const NETFLIX = 'netflix';
+export const PRIME = 'prime';
+
 export const i18nMap = {
   en_US: {
     next_epi: "Next Up",

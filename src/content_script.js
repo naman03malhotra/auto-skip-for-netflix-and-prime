@@ -7,7 +7,8 @@ import {
   setInnerText,
   getCountryAndState
 } from './utils/util';
-import { elementMapping, LOADING_TEXT } from './element_mapping';
+import { elementMapping } from './element_mapping';
+import { LOADING_TEXT } from './utils/i18n';
 
 async function skipNetflixAndPrime() {
   let skipButton = fetchDomNode(elementMapping);

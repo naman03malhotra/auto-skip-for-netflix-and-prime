@@ -528,7 +528,7 @@
         "*://amazon.zw/*"
       ],
       "js": [
-        "dist/bundle.js"
+        "dist/bundle_new.js"
       ],
       "run_at": "document_end",
       "all_frames": true

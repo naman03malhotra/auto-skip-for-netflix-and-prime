@@ -1,7 +1,6 @@
-import { NETFLIX } from "../element_mapping";
-import { i18nMap } from './i18n';
+import { i18nMap, NETFLIX } from './i18n';
 
-let globalLocale;
+const memoizedLocaleForPrime = memoize(getLocaleForPrime);
 
 export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -58,8 +57,8 @@ function getLocaleForPrime() {
 
   const regEx = new RegExp('(?<="locale":")(.*?)(?=",)');
 
-  for (let i = 0; i < scripts.length; i++) {
-    const eachScriptInnerText = scripts[i].innerText;
+  for (script of scripts) {
+    const eachScriptInnerText = script.innerText;
 
     const locale = eachScriptInnerText.match(regEx);
 
@@ -77,9 +76,15 @@ export function syncLocalData(key) {
   });
 }
 
-function getCachedLocalePrime() {
-  globalLocale = globalLocale ? globalLocale : getLocaleForPrime();
-  return globalLocale;
+function memoize(callback) {
+  let memoHash = {};
+  return (param) => {
+    if (memoHash[param]) {
+      return memoHash[param];
+    } else {
+      memoHash[param] = callback();
+    }
+  }
 }
 
 // this is for just for analytics purpose
@@ -89,7 +94,7 @@ export function getCountryAndState() {
 
 export function translateLocale(skipEventKey) {
   const fallbackLocale = 'en_US';
-  const locale = getCachedLocalePrime();
+  const locale = memoizedLocaleForPrime('locale');
 
   if (i18nMap[locale]) {
     if (i18nMap[locale][skipEventKey]) {

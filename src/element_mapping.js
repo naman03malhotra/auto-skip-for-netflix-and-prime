@@ -1,9 +1,12 @@
 import { translateLocale } from './utils/util';
-import { SKIP_INTRO, SKIP_RECAP, NEXT_EPISODE, SKIP_ADS } from './utils/i18n';
-export const LOADING_TEXT = 'Skipping...';
-
-export const NETFLIX = 'netflix';
-const PRIME = 'prime';
+import {
+  SKIP_INTRO,
+  SKIP_RECAP,
+  NEXT_EPISODE,
+  SKIP_ADS,
+  NETFLIX,
+  PRIME
+} from './utils/i18n';
 
 export const elementMapping = [{
   type: NETFLIX,
