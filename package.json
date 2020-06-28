@@ -6,6 +6,7 @@
   "main": "dist/bundle.js",
   "scripts": {
     "build": "rm -rf dist && microbundle -f modern --sourcemap false && npm run post",
+    "build:dev": "rm -rf dist && microbundle -f iife",
     "dev": "microbundle watch",
     "post": "mv dist/bundle.modern.js dist/bundle.js",
     "publish": "rm -rf ../final_build && mkdir ../final_build/ && mkdir ../final_build/src/ && cp -R {manifest.json,dist} ../final_build/ && cp -R src/{assets,popup.html,styles,background.js} ../final_build/src/ && cd .. && zip -r final_build_$npm_package_version.zip final_build",

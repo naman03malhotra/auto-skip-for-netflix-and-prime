@@ -1,12 +1,14 @@
 export const SKIP_INTRO = "skip_intro";
 export const SKIP_RECAP = "skip_recap";
 export const NEXT_EPISODE = "next_epi";
+export const SKIP_ADS = "skip_ads";
 
 export const i18nMap = {
   en_US: {
     next_epi: "Next Up",
     skip_intro: "Skip Intro",
     skip_recap: "Skip Recap",
+    skip_ads: "Skip"
   },
   en_GB: {
     next_epi: "Next Up",
