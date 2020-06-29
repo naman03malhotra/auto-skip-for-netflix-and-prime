@@ -38,7 +38,7 @@ or
 yarn run build:dev
 ```
 ## Add your national language (Prime)
-So currently SKip Intro, Skip Recap, Next episode skip works for 22 languages supported by prime.
+So currently Skip Intro, Skip Recap, Next episode skip works for 22 languages supported by prime.
 But skip Ads in only supported in English, to enable that in your language, I would need your help in translation of the word `Skip` to your national language.
 
 Please have a look at the file `src/utils/i18n.js`, and add the respective value against keyword `skip_ads` in `i18nMap`.
