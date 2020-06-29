@@ -5,8 +5,10 @@ import {
   fetchDomNode,
   getInnerText,
   setInnerText,
+  getCountryAndState
 } from './utils/util';
-import { elementMapping, LOADING_TEXT } from './element_mapping';
+import { elementMapping } from './element_mapping';
+import { LOADING_TEXT } from './utils/i18n';
 
 async function skipNetflixAndPrime() {
   let skipButton = fetchDomNode(elementMapping);
@@ -15,7 +17,7 @@ async function skipNetflixAndPrime() {
     return;
   }
 
-  const { domNode, type, selector, extraWait } = skipButton;
+  const { domNode, type, extraWait, ...rest } = skipButton;
 
   if (domNode) {
     const innerText = getInnerText(domNode, type);
@@ -30,15 +32,26 @@ async function skipNetflixAndPrime() {
 
     await setInnerText(domNode, type, LOADING_TEXT);
 
+    const response = await getCountryAndState();
+    const {
+      country_name: countryName,
+      city,
+      country_code: countryCode,
+    } = await response.json();
+
     const data = {
       event: "Skipped",
       properties: {
         token: secretKey,
         extensionId: chrome.runtime && chrome.runtime.id ? chrome.runtime.id : 'ID_NOT_PRESENT',
         distinct_id: chrome.runtime && chrome.runtime.id ? chrome.runtime.id : 'ID_NOT_PRESENT',
-        selector,
         type,
         innerTextDatum: innerText,
+        countryName,
+        countryCode,
+        city,
+        osLocale: window.navigator.language,
+        ...rest
       },
     };
 

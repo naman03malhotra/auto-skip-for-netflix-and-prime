@@ -25,18 +25,25 @@ https://www.producthunt.com/posts/auto-skip-intro-for-netflix-and-prime
 
 ## Development
 
-clone the repo and run `npm run build`, make changes and test it in chrome dev mode.
+clone the repo and run `npm run build:dev`, make changes and test it in chrome dev mode.
 I'll be delighted to receive a PR.
 
 ```
-npm run build
+npm run build:dev
 ```
 
 or
 
 ```
-yarn run build
+yarn run build:dev
 ```
+## Add your national language (Prime)
+So currently Skip Intro, Skip Recap, Next episode skip works for 22 languages supported by prime.
+But skip Ads in only supported in English, to enable that in your language, I would need your help in translation of the word `Skip` to your national language.
+
+Please have a look at the file `src/utils/i18n.js`, and add the respective value against keyword `skip_ads` in `i18nMap`.
+
+Please test it in your system, raise a PR and tag me for review. Ping me if you have any doubts.
 
 ## Analytics
 

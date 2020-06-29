@@ -1,7 +1,12 @@
-export const LOADING_TEXT = 'Skipping...';
-
-export const NETFLIX = 'netflix';
-const PRIME = 'prime';
+import { translateLocale } from './utils/util';
+import {
+  SKIP_INTRO,
+  SKIP_RECAP,
+  NEXT_EPISODE,
+  SKIP_ADS,
+  NETFLIX,
+  PRIME
+} from './utils/i18n';
 
 export const elementMapping = [{
   type: NETFLIX,
@@ -29,19 +34,27 @@ export const elementMapping = [{
   selector: ".nextUpCard",
 }, {
   type: PRIME,
-  selector: "//div[text()='Skip Intro']",
-  xpath: true
-}, {
-  type: PRIME,
-  selector: "//div[text()='Skip Recap']",
-  xpath: true
-}, {
-  type: PRIME,
-  selector: "//div[text()='Skip']",
-  xpath: true
-}, {
-  type: PRIME,
-  selector: "//div[text()='Next Up']/parent::div/following-sibling::div",
+  skipEvent: SKIP_INTRO,
+  selector: `//div[text()="${translateLocale(SKIP_INTRO).translatedText}"]`,
   xpath: true,
+  ...translateLocale(SKIP_INTRO),
+}, {
+  type: PRIME,
+  skipEvent: SKIP_RECAP,
+  selector: `//div[text()="${translateLocale(SKIP_RECAP).translatedText}"]`,
+  xpath: true,
+  ...translateLocale(SKIP_RECAP),
+}, {
+  type: PRIME,
+  skipEvent: SKIP_ADS,
+  selector: `//div[text()="${translateLocale(SKIP_ADS).translatedText}"]`,
+  xpath: true,
+  ...translateLocale(SKIP_ADS)
+}, {
+  type: PRIME,
+  skipEvent: NEXT_EPISODE,
+  selector: `//div[text()="${translateLocale(NEXT_EPISODE).translatedText}"]/parent::div/following-sibling::div`,
   extraWait: true,
+  xpath: true,
+  ...translateLocale(NEXT_EPISODE),
 }];
