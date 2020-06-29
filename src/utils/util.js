@@ -83,6 +83,7 @@ function memoize(callback) {
       return memoHash[param];
     } else {
       memoHash[param] = callback();
+      return memoHash[param];
     }
   }
 }
