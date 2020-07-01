@@ -10,6 +10,8 @@ import {
 import { elementMapping } from './element_mapping';
 import { LOADING_TEXT } from './utils/i18n';
 
+const { version = 'NOT_RECEIVED' } = chrome.runtime.getManifest();
+
 async function skipNetflixAndPrime() {
   let skipButton = fetchDomNode(elementMapping);
 
@@ -44,12 +46,12 @@ async function skipNetflixAndPrime() {
       properties: {
         token: secretKey,
         extensionId: chrome.runtime && chrome.runtime.id ? chrome.runtime.id : 'ID_NOT_PRESENT',
-        distinct_id: chrome.runtime && chrome.runtime.id ? chrome.runtime.id : 'ID_NOT_PRESENT',
         type,
         innerTextDatum: innerText,
         countryName,
         countryCode,
         city,
+        version,
         osLocale: window.navigator.language,
         ...rest
       },
