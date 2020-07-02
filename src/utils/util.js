@@ -1,6 +1,6 @@
 import { i18nMap, NETFLIX } from './i18n';
 
-const memoizedLocaleForPrime = memoize(getLocaleForPrime);
+export const memoizedLocaleForPrime = memoize(getLocaleForPrime);
 
 export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
