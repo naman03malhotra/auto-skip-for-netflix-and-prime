@@ -11,6 +11,7 @@ import { elementMapping } from './element_mapping';
 import { LOADING_TEXT } from './utils/i18n';
 
 const COUNTRY_API_FAILED = 'COUNTRY_API_FAILED';
+const REQUEST_BLOCKED = 'REQUEST_BLOCKED';
 
 async function skipNetflixAndPrime() {
   try {
@@ -48,14 +49,14 @@ async function skipNetflixAndPrime() {
       } catch (err) {
         const errObj = {
           message: err.message,
-          errCode: response.status,
+          errCode: response ? response.status : REQUEST_BLOCKED,
         };
         errorTrack(errObj, "COUNTRY_API_FUNC");
       }
 
-      const countryName = response.country_name ? response.country_name : COUNTRY_API_FAILED;
-      const countryCode = response.country_code ? response.country_code : COUNTRY_API_FAILED;
-      const city = response.city ? response.city : COUNTRY_API_FAILED;
+      const countryName = response ? (response.country_name ? response.country_name : COUNTRY_API_FAILED) : REQUEST_BLOCKED;
+      const countryCode = response ? (response.country_code ? response.country_code : COUNTRY_API_FAILED) : REQUEST_BLOCKED;
+      const city = response ? (response.city ? response.city : COUNTRY_API_FAILED) : REQUEST_BLOCKED;
 
       const data = {
         event: "Skipped",
