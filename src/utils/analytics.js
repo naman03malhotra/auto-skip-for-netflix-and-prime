@@ -1,7 +1,7 @@
-import { secretKey } from "../../secret_key";
-import { memoizedLocaleForPrime } from "./util";
+import { secretKey } from '../../secret_key';
+import { memoizedLocale } from './util';
 
-export const { version = 'NOT_RECEIVED' } = chrome.runtime.getManifest();
+export const { version = "NOT_RECEIVED" } = chrome.runtime.getManifest();
 
 function toBase64(data) {
   return btoa(unescape(encodeURIComponent(JSON.stringify(data))));
@@ -24,11 +24,11 @@ export function errorTrack(error, triggerPoint = "GENERIC_ERROR") {
       message: error.message,
       errCode: error.errCode,
       osLocale: window.navigator.language,
-      locale: memoizedLocaleForPrime('locale'),
+      locale: memoizedLocale("locale"),
       triggerPoint,
-      version
-    }
-  }
+      version,
+    },
+  };
 
   sendAnalytics(errData);
 }

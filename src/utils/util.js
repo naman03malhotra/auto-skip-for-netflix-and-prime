@@ -1,6 +1,6 @@
 import { i18nMap, NETFLIX } from './i18n';
 
-export const memoizedLocaleForPrime = memoize(getLocaleForPrime);
+export const memoizedLocale = memoize(getLocaleForPrime);
 
 export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -95,7 +95,7 @@ export function getCountryAndState() {
 
 export function translateLocale(skipEventKey) {
   const fallbackLocale = 'en_US';
-  const locale = memoizedLocaleForPrime('locale');
+  const locale = memoizedLocale('locale');
 
   if (i18nMap[locale]) {
     if (i18nMap[locale][skipEventKey]) {

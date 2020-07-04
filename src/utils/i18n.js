@@ -1,7 +1,7 @@
-export const SKIP_INTRO = "skip_intro";
-export const SKIP_RECAP = "skip_recap";
-export const NEXT_EPISODE = "next_epi";
-export const SKIP_ADS = "skip_ads";
+export const SKIP_INTRO = 'skip_intro';
+export const SKIP_RECAP = 'skip_recap';
+export const NEXT_EPISODE = 'next_epi';
+export const SKIP_ADS = 'skip_ads';
 
 export const LOADING_TEXT = 'Skipping...';
 
@@ -13,73 +13,85 @@ export const i18nMap = {
     next_epi: "Next Up",
     skip_intro: "Skip Intro",
     skip_recap: "Skip Recap",
-    skip_ads: "Skip"
+    skip_ads: "Skip",
   },
   en_GB: {
     next_epi: "Next Up",
     skip_intro: "Skip Intro",
     skip_recap: "Skip Recap",
-    skip_ads: "Skip"
+    skip_ads: "Skip",
   },
   es_ES: {
     skip_intro: "Saltar intro",
     next_epi: "A continuación",
     skip_recap: "Saltar resumen",
+    skip_ads: "Saltar",
   },
   fr_FR: {
     skip_intro: "Passer le générique",
     next_epi: "Suivant",
     skip_recap: "Passer le résumé",
+    skip_ads: "Passer",
   },
   it_IT: {
     skip_intro: "Salta l'introduzione",
     next_epi: "Segue",
     skip_recap: "Salta il riassunto",
+    skip_ads: "Salta",
   },
   da_DK: {
     skip_intro: "Spring over intro",
     next_epi: "Næste",
     skip_recap: "Spring over resumé",
+    skip_ads: "Spring over",
   },
   id_ID: {
     skip_intro: "Lewati Intro",
     next_epi: "Berikutnya",
     skip_recap: "Lewati Ringkasan",
+    skip_ads: "Lewati",
   },
   nl_NL: {
     skip_intro: "Intro overslaan",
     next_epi: "Volgende",
     skip_recap: "Recap overslaan",
+    skip_ads: "Overslaan",
   },
   nb_NO: {
     skip_intro: "Hopp over intro",
     next_epi: "Neste",
     skip_recap: "Hopp over sammendrag",
+    skip_ads: "Hopp over",
   },
   pl_PL: {
     skip_intro: "Pomiń wstęp",
     next_epi: "Następny",
     skip_recap: "Pomiń podsumowanie",
+    skip_ads: "Pomiń",
   },
   pt_BR: {
     skip_intro: "Pular abertura",
     next_epi: "A seguir",
     skip_recap: "Pular resumo",
+    skip_ads: "Pular",
   },
   de_DE: {
     next_epi: "Nächste",
     skip_intro: "Intro überspringen",
     skip_recap: "Rückblick überspringen",
+    skip_ads: "Überspringen",
   },
   fi_FI: {
     skip_intro: "Ohita intro",
     next_epi: "Seuraavaksi",
     skip_recap: "Ohita yhteenveto",
+    skip_ads: "Ohita",
   },
   sv_SE: {
     skip_intro: "Hoppa över intro",
     next_epi: "Nästa",
     skip_recap: "Hoppa över resumé",
+    skip_ads: "Hoppa",
   },
   tr_TR: {
     next_epi: "Sıradaki",
@@ -90,6 +102,7 @@ export const i18nMap = {
     skip_intro: "Пропустить заставку",
     next_epi: "Следующее",
     skip_recap: "Пропустить содержание предыдущих серий",
+    skip_ads: "Пропускать",
   },
   hi_IN: {
     skip_intro: "परिचय छोड़ें",
