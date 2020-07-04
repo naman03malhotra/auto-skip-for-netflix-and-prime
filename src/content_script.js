@@ -15,7 +15,6 @@ const REQUEST_BLOCKED = 'REQUEST_BLOCKED';
 
 async function skipNetflixAndPrime() {
   try {
-
     let skipButton;
     try {
       skipButton = fetchDomNode(elementMapping);
@@ -70,15 +69,14 @@ async function skipNetflixAndPrime() {
           city,
           version,
           osLocale: window.navigator.language,
-          ...rest
+          ...rest,
         },
       };
 
       domNode.click();
       sendAnalytics(data);
     }
-  }
-  catch (err) {
+  } catch (err) {
     errorTrack(err);
   }
 }

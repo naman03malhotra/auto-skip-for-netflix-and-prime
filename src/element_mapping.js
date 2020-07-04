@@ -1,4 +1,4 @@
-import { translateLocale } from './utils/util';
+import { translateLocale, memoizedLocale } from './utils/util';
 import {
   SKIP_INTRO,
   SKIP_RECAP,
@@ -8,30 +8,40 @@ import {
   PRIME
 } from './utils/i18n';
 
+const locale = memoizedLocale('locale');
+
 export const elementMapping = [{
   type: NETFLIX,
   selector: "[aria-label='Skip Intro']",
+  locale,
 }, {
   type: NETFLIX,
   selector: ".skip-credits > a",
+  locale,
 }, {
   type: NETFLIX,
   selector: "[aria-label='Skip Recap']",
+  locale,
 }, {
   type: NETFLIX,
   selector: "[aria-label='Continue Playing']",
+  locale,
 }, {
   type: NETFLIX,
   selector: ".interrupter-actions > .nf-icon-button:first-child",
+  locale,
 }, {
   type: PRIME,
   selector: ".skipElement",
+  locale,
 }, {
   type: PRIME,
   selector: ".adSkipButton",
+  locale,
 }, {
   type: PRIME,
   selector: ".nextUpCard",
+  locale,
 }, {
   type: PRIME,
   skipEvent: SKIP_INTRO,

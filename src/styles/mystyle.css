@@ -27,3 +27,15 @@ body {
 .container {
   padding: 20px;;
 }
+
+.icon-container {
+  margin: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-icons {
+  fill: #ffc045;
+  height: 24px;
+  width: 24px;
+}
