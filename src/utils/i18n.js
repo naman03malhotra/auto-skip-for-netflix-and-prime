@@ -139,4 +139,10 @@ export const i18nMap = {
     next_epi: "다음 영상",
     skip_recap: "요약 건너뛰기",
   },
+  ja_JP: {
+    skip_intro: "紹介をスキップ",
+    next_epi: "次のエピソード",
+    skip_recap: "要約をスキップ",
+    skip_ads: "広告をスキップ",
+  },
 };
