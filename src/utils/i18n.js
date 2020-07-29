@@ -31,7 +31,7 @@ export const i18nMap = {
     skip_intro: "Passer le générique",
     next_epi: "Suivant",
     skip_recap: "Passer le résumé",
-    skip_ads: "Passer",
+    skip_ads: "Ignorer",
   },
   it_IT: {
     skip_intro: "Salta l'introduzione",
