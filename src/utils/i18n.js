@@ -34,9 +34,9 @@ export const i18nMap = {
     skip_ads: "Ignorer",
   },
   it_IT: {
-    skip_intro: "Salta l'introduzione",
+    skip_intro: "Salta intro",
     next_epi: "Segue",
-    skip_recap: "Salta il riassunto",
+    skip_recap: "Salta riassunto",
     skip_ads: "Salta",
   },
   da_DK: {
