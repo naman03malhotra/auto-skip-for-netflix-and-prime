@@ -16,6 +16,6 @@
   "author": "Naman Malhotra",
   "license": "ISC",
   "devDependencies": {
-    "microbundle": "0.12.0"
+    "microbundle": "0.12.3"
   }
 }
