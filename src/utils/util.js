@@ -1,4 +1,4 @@
-import { i18nMap, NETFLIX } from './i18n';
+import { i18nMap, NETFLIX } from "./i18n";
 
 export const memoizedLocale = memoize(getLocaleForPrime);
 
@@ -44,12 +44,12 @@ export function getInnerText(domNode, type) {
 export async function setInnerText(domNode, type, text) {
   if (type === NETFLIX && domNode.firstElementChild) {
     domNode.firstElementChild.innerText = text;
-    await sleep(500);
+    // await sleep(150);
     return;
   }
 
   domNode.innerText = text;
-  await sleep(1000);
+  // await sleep(300);
 }
 
 function getLocaleForPrime() {
@@ -85,17 +85,17 @@ function memoize(callback) {
       memoHash[param] = callback();
       return memoHash[param];
     }
-  }
+  };
 }
 
 // this is for just for analytics purpose
 export function getCountryAndState() {
-  return fetch('https://ipapi.co/json/');
+  return fetch("https://ipapi.co/json/");
 }
 
 export function translateLocale(skipEventKey) {
-  const fallbackLocale = 'en_US';
-  const locale = memoizedLocale('locale');
+  const fallbackLocale = "en_US";
+  const locale = memoizedLocale("locale");
 
   if (i18nMap[locale]) {
     if (i18nMap[locale][skipEventKey]) {
@@ -104,14 +104,14 @@ export function translateLocale(skipEventKey) {
         localeFound: true,
         keyFound: true,
         locale,
-      }
+      };
     } else {
       return {
         translatedText: i18nMap[fallbackLocale][skipEventKey],
         localeFound: true,
         keyFound: false,
         locale,
-      }
+      };
     }
   } else {
     return {
@@ -119,6 +119,6 @@ export function translateLocale(skipEventKey) {
       localeFound: false,
       keyFound: false,
       locale,
-    }
+    };
   }
 }

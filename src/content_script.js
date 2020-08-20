@@ -1,17 +1,17 @@
-import { secretKey } from '../secret_key';
-import { sendAnalytics, version, errorTrack } from './utils/analytics';
+import { secretKey } from "../secret_key";
+import { sendAnalytics, version, errorTrack } from "./utils/analytics";
 import {
   sleep,
   fetchDomNode,
   getInnerText,
   setInnerText,
-  getCountryAndState
-} from './utils/util';
-import { elementMapping } from './element_mapping';
-import { LOADING_TEXT } from './utils/i18n';
+  getCountryAndState,
+} from "./utils/util";
+import { elementMapping } from "./element_mapping";
+import { LOADING_TEXT } from "./utils/i18n";
 
-const COUNTRY_API_FAILED = 'COUNTRY_API_FAILED';
-const REQUEST_BLOCKED = 'REQUEST_BLOCKED';
+const COUNTRY_API_FAILED = "COUNTRY_API_FAILED";
+const REQUEST_BLOCKED = "REQUEST_BLOCKED";
 
 async function skipNetflixAndPrime() {
   try {
@@ -36,7 +36,7 @@ async function skipNetflixAndPrime() {
       }
 
       if (extraWait) {
-        await sleep(800);
+        await sleep(600);
       }
 
       await setInnerText(domNode, type, LOADING_TEXT);
@@ -53,15 +53,30 @@ async function skipNetflixAndPrime() {
         errorTrack(errObj, "COUNTRY_API_FUNC");
       }
 
-      const countryName = response ? (response.country_name ? response.country_name : COUNTRY_API_FAILED) : REQUEST_BLOCKED;
-      const countryCode = response ? (response.country_code ? response.country_code : COUNTRY_API_FAILED) : REQUEST_BLOCKED;
-      const city = response ? (response.city ? response.city : COUNTRY_API_FAILED) : REQUEST_BLOCKED;
+      const countryName = response
+        ? response.country_name
+          ? response.country_name
+          : COUNTRY_API_FAILED
+        : REQUEST_BLOCKED;
+      const countryCode = response
+        ? response.country_code
+          ? response.country_code
+          : COUNTRY_API_FAILED
+        : REQUEST_BLOCKED;
+      const city = response
+        ? response.city
+          ? response.city
+          : COUNTRY_API_FAILED
+        : REQUEST_BLOCKED;
 
       const data = {
         event: "Skipped",
         properties: {
           token: secretKey,
-          extensionId: chrome.runtime && chrome.runtime.id ? chrome.runtime.id : 'ID_NOT_PRESENT',
+          extensionId:
+            chrome.runtime && chrome.runtime.id
+              ? chrome.runtime.id
+              : "ID_NOT_PRESENT",
           type,
           innerTextDatum: innerText,
           countryName,
@@ -81,4 +96,4 @@ async function skipNetflixAndPrime() {
   }
 }
 
-setInterval(() => skipNetflixAndPrime(), 1000);
+setInterval(() => skipNetflixAndPrime(), 800);
