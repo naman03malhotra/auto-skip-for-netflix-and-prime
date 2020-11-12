@@ -1,5 +1,5 @@
-import { secretKey } from '../../secret_key';
-import { memoizedLocale } from './util';
+import { secretKey } from "../../secret_key";
+import { memoizedLocale } from "./util";
 
 export const { version = "NOT_RECEIVED" } = chrome.runtime.getManifest();
 
@@ -7,8 +7,8 @@ function toBase64(data) {
   return btoa(unescape(encodeURIComponent(JSON.stringify(data))));
 }
 
-async function sendData(data) {
-  await fetch(`https://api.mixpanel.com/track/?data=${data}`);
+function sendData(data) {
+  fetch(`https://api.mixpanel.com/track/?data=${data}`);
 }
 
 export function sendAnalytics(data) {
