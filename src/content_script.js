@@ -36,10 +36,11 @@ async function skipNetflixAndPrime() {
       }
 
       if (extraWait) {
-        await sleep(600);
+        await sleep(700);
       }
 
       await setInnerText(domNode, type, LOADING_TEXT);
+      domNode.click();
 
       let response;
       try {
@@ -88,7 +89,6 @@ async function skipNetflixAndPrime() {
         },
       };
 
-      domNode.click();
       sendAnalytics(data);
     }
   } catch (err) {
@@ -96,4 +96,4 @@ async function skipNetflixAndPrime() {
   }
 }
 
-setInterval(() => skipNetflixAndPrime(), 800);
+setInterval(() => skipNetflixAndPrime(), 850);
