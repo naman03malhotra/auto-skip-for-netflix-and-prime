@@ -1,6 +1,7 @@
 # Auto Skip for Prime and NetFlix (ASPN)
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/users/geikbfhmddindncdioecbgpehlhencaj?color=g&label=Chrome%20Store%20Users)](https://chrome.google.com/webstore/detail/auto-skip-intro-for-prime/geikbfhmddindncdioecbgpehlhencaj)
+![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/geikbfhmddindncdioecbgpehlhencaj)
 
 Auto Skip Intro, Recaps for Prime and NetFlix
 
@@ -37,7 +38,9 @@ or
 ```
 yarn run build:dev
 ```
+
 ## Add your national language (Prime)
+
 So currently Skip Intro, Skip Recap, Next episode skip works for 22 languages supported by prime.
 But skip Ads in only supported in a few languages, to enable that in your language, I would need your help in translation of the word `Skip` to your national language.
 
