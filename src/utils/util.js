@@ -55,7 +55,7 @@ export async function setInnerText(domNode, type, text) {
 function getLocaleForPrime() {
   const scripts = document.querySelectorAll('script[type="text/template"]');
 
-  const regEx = new RegExp('(?<="locale":")(.*?)(?=",)');
+  const regEx = new RegExp('(?<="locale":")(.*?)(?=")');
 
   for (script of scripts) {
     const eachScriptInnerText = script.innerText;
