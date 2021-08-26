@@ -1,6 +1,6 @@
 {
   "name": "netflix-prime-auto-skip",
-  "version": "3.4.0",
+  "version": "3.4.1",
   "description": "Auto Skip Intro, Recaps for Prime and Netflix",
   "source": "src/content_script.js",
   "main": "dist/bundle_new.js",
