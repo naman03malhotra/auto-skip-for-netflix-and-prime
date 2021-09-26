@@ -180,4 +180,10 @@ export const i18nMap = {
     skip_recap: "Összefoglaló kihagyása",
     skip_ads: "Átugrás",
   },
+  vi_VN: {
+    skip_intro: "Bỏ qua Giới thiệu",
+    next_epi: "Tập tiếp theo",
+    skip_recap: "Bỏ qua Tóm tắt",
+    skip_ads: "Bỏ qua Quảng cáo",
+  },
 };
