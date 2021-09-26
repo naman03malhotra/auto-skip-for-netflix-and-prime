@@ -146,4 +146,10 @@ export const i18nMap = {
     skip_recap: "要約をスキップ",
     skip_ads: "広告をスキップ",
   },
+  vi_VN: {
+    skip_intro: "Bỏ qua Giới thiệu",
+    next_epi: "Tập tiếp theo",
+    skip_recap: "Bỏ qua Tóm tắt",
+    skip_ads: "Bỏ qua Quảng cáo",
+  },
 };
