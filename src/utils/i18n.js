@@ -135,6 +135,11 @@ export const i18nMap = {
     next_epi: "接著播放",
     skip_recap: "略過前集提要",
   },
+  zh_HK: {
+    skip_intro: "略過介紹",
+    next_epi: "下一集",
+    skip_recap: "略過前情提要",
+  },
   ko_KR: {
     skip_intro: "소개 건너뛰기",
     next_epi: "다음 영상",
