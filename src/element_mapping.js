@@ -23,6 +23,11 @@ export const elementMapping = [
   },
   {
     type: NETFLIX,
+    selector: "[data-uia=\"next-episode-seamless-button\"]",
+    locale: o
+  },
+  {
+    type: NETFLIX,
     selector: "[aria-label='Skip Recap']",
     locale,
   },
