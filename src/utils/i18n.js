@@ -77,7 +77,9 @@ export const i18nMap = {
   },
   de_DE: {
     next_epi: "Nächste",
+    next_epi_extra: "Nächste Folge",
     skip_intro: "Vorspann überspringen",
+    skip_intro_extra: "Intro überspringen",
     skip_recap: "Rückblick überspringen",
     skip_recap_extra: "Zusammenfassung überspringen",
     skip_ads: "Überspringen",
