@@ -146,4 +146,9 @@ export const i18nMap = {
     skip_recap: "要約をスキップ",
     skip_ads: "広告をスキップ",
   },
+  hu_HU: {
+    next_epi: "Következő epizód",
+    skip_intro: "Főcím kihagyása",
+    skip_recap: "Összefoglaló kihagyása",
+    skip_ads: "Átugrás",
 };
