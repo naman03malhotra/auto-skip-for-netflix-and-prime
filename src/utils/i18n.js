@@ -64,8 +64,8 @@ export const i18nMap = {
     skip_ads: "Hopp over",
   },
   pl_PL: {
-    skip_intro: "Pomiń wstęp",
-    next_epi: "Następny",
+    skip_intro: "Pomiń czołówkę",
+    next_epi: "Następny odcinek",
     skip_recap: "Pomiń podsumowanie",
     skip_ads: "Pomiń",
   },
