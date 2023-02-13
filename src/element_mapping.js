@@ -10,10 +10,14 @@ import {
 
 const locale = memoizedLocale("locale");
 
-export const elementMapping = [
-  {
+export const elementMapping = [  {
     type: NETFLIX,
     selector: "[aria-label='Skip Intro']",
+    locale,
+  },
+  {
+    type: NETFLIX,
+    selector: "[data-uia='player-skip-intro']",
     locale,
   },
   {
@@ -23,7 +27,18 @@ export const elementMapping = [
   },
   {
     type: NETFLIX,
+    selector:
+        "[data-uia='next-episode-seamless-button']",
+    locale,
+  },
+  {
+    type: NETFLIX,
     selector: "[aria-label='Skip Recap']",
+    locale,
+  },
+  {
+    type: NETFLIX,
+    selector: "[data-uia='player-skip-recap']",
     locale,
   },
   {
@@ -33,7 +48,8 @@ export const elementMapping = [
   },
   {
     type: NETFLIX,
-    selector: ".interrupter-actions > .nf-icon-button:first-child",
+    selector:
+        ".interrupter-actions > .nf-icon-button:first-child",
     locale,
   },
   {
