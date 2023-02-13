@@ -10,7 +10,8 @@ import {
 
 const locale = memoizedLocale("locale");
 
-export const elementMapping = [  {
+export const elementMapping = [
+  {
     type: NETFLIX,
     selector: "[aria-label='Skip Intro']",
     locale,
@@ -48,8 +49,7 @@ export const elementMapping = [  {
   },
   {
     type: NETFLIX,
-    selector:
-        ".interrupter-actions > .nf-icon-button:first-child",
+    selector: ".interrupter-actions > .nf-icon-button:first-child",
     locale,
   },
   {
