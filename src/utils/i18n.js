@@ -146,4 +146,10 @@ export const i18nMap = {
     skip_recap: "要約をスキップ",
     skip_ads: "広告をスキップ",
   },
+  ar_SA: {
+    next_epi: "الحلقة التالية",
+    skip_intro: "تخطي المقدمة",
+    skip_recap: "تخطي الملخص",
+    skip_ads: "تخطي",
+  },
 };
