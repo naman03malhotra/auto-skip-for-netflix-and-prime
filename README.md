@@ -1,4 +1,4 @@
-# Auto Skip for Prime and NetFlix (ASPN)
+# Netflix, Prime, JioCinema, Hotstar Skip Intros Automatically
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/users/geikbfhmddindncdioecbgpehlhencaj?color=g&label=Chrome%20Store%20Users)](https://chrome.google.com/webstore/detail/auto-skip-intro-for-prime/geikbfhmddindncdioecbgpehlhencaj)
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/geikbfhmddindncdioecbgpehlhencaj)
