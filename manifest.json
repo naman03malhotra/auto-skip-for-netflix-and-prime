@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Netflix, Prime, JioCinema, Hotstar - Auto intro skipper",
   "author": "Naman Malhotra",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Netflix, Prime, JioCinema, Hotstar Skip Intros Automatically",
   "icons": {
     "16": "src/assets/512.png",

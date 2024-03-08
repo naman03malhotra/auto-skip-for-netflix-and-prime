@@ -2,6 +2,7 @@ export const SKIP_INTRO = "skip_intro";
 export const SKIP_RECAP = "skip_recap";
 export const NEXT_EPISODE = "next_epi";
 export const SKIP_ADS = "skip_ads";
+export const SKIP_CONTINUE_WATCHING_NETFLIX = "skip_continue_watching_netflix";
 
 export const LOADING_TEXT = "Skipping...";
 

@@ -1,6 +1,6 @@
 {
   "name": "netflix-prime-auto-skip",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Netflix, Prime, JioCinema, Hotstar - Auto intro skipper",
   "source": "src/content_script.js",
   "main": "dist/bundle_new.js",

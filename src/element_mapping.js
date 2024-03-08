@@ -7,7 +7,8 @@ import {
   NETFLIX,
   PRIME,
   HOTSTAR,
-  JIOCINEMA
+  JIOCINEMA,
+  SKIP_CONTINUE_WATCHING_NETFLIX
 } from "./utils/i18n";
 
 const locale = memoizedLocale("locale");
@@ -17,11 +18,13 @@ export const elementMapping = [
     type: NETFLIX,
     selector: "[aria-label='Skip Intro']",
     locale,
+    skipEvent: SKIP_INTRO,
   },
   {
     type: NETFLIX,
     selector: ".skip-credits > a",
     locale,
+    skipEvent: SKIP_INTRO,
   },
   // {
   //   type: NETFLIX,
@@ -32,6 +35,7 @@ export const elementMapping = [
     type: NETFLIX,
     selector: "[aria-label='Continue Playing']",
     locale,
+    skipEvent: SKIP_CONTINUE_WATCHING_NETFLIX,
   },
   // {
   //   type: NETFLIX,
@@ -42,17 +46,20 @@ export const elementMapping = [
     type: NETFLIX,
     selector: ".interrupter-actions > .nf-icon-button:first-child",
     locale,
+    skipEvent: SKIP_CONTINUE_WATCHING_NETFLIX,
   },
   {
     type: PRIME,
     selector: ".skipElement",
     locale,
+    skipEvent: SKIP_INTRO,
   },
-  // {
-  //   type: PRIME,
-  //   selector: ".adSkipButton",
-  //   locale,
-  // },
+  {
+    type: PRIME,
+    selector: ".adSkipButton",
+    locale,
+    skipEvent: SKIP_INTRO,
+  },
   // {
   //   type: PRIME,
   //   selector: ".nextUpCard",
@@ -72,13 +79,13 @@ export const elementMapping = [
   //   xpath: true,
   //   ...translateLocale(SKIP_RECAP),
   // },
-  // {
-  //   type: PRIME,
-  //   skipEvent: SKIP_ADS,
-  //   selector: `//*[text()="${translateLocale(SKIP_ADS).translatedText}"]`,
-  //   xpath: true,
-  //   ...translateLocale(SKIP_ADS),
-  // },
+  {
+    type: PRIME,
+    skipEvent: SKIP_ADS,
+    selector: `//*[text()="${translateLocale(SKIP_ADS).translatedText}"]`,
+    xpath: true,
+    ...translateLocale(SKIP_ADS),
+  },
   // {
   //   type: PRIME,
   //   skipEvent: NEXT_EPISODE,
@@ -108,5 +115,12 @@ export const elementMapping = [
     type: JIOCINEMA,
     skipEvent: SKIP_INTRO,
     selector: '[aria-label="skip intro"]',
+    locale,
+  },
+  {
+    type: JIOCINEMA,
+    skipEvent: SKIP_ADS,
+    selector: '[aria-label="Skip Ad"]',
+    locale,
   }
 ];
