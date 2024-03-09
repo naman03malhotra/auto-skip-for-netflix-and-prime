@@ -24,7 +24,7 @@ export const elementMapping = [
   {
     type: NETFLIX,
     selector: "[data-uia=\"next-episode-seamless-button\"]",
-    locale: o
+    locale,
   },
   {
     type: NETFLIX,
