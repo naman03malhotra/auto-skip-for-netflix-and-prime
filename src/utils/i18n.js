@@ -2,11 +2,14 @@ export const SKIP_INTRO = "skip_intro";
 export const SKIP_RECAP = "skip_recap";
 export const NEXT_EPISODE = "next_epi";
 export const SKIP_ADS = "skip_ads";
+export const SKIP_CONTINUE_WATCHING_NETFLIX = "skip_continue_watching_netflix";
 
 export const LOADING_TEXT = "Skipping...";
 
 export const NETFLIX = "netflix";
 export const PRIME = "prime";
+export const HOTSTAR = "hotstar";
+export const JIOCINEMA = "jiocinema";
 
 export const i18nMap = {
   en_US: {
@@ -27,14 +30,26 @@ export const i18nMap = {
     skip_recap: "Omitir resumen",
     skip_ads: "Saltar",
   },
+  es_AR: {
+    skip_intro: "Omitir intro",
+    next_epi: "Siguiente episodio",
+    skip_recap: "Omitir el resumen",
+    skip_ads: "Saltar",
+  },
   fr_FR: {
-    skip_intro: "Passer l'intro",
-    next_epi: "Suivant",
+    skip_intro: "Passer l'introduction",
+    next_epi: "Ép. suivant",
     skip_recap: "Passer le résumé",
     skip_ads: "Ignorer",
   },
+  fr_CA: {
+    skip_intro: "Ignorer l'introduction",
+    next_epi: "Épisode suivant",
+    skip_recap: "Ignorer le résumé",
+    skip_ads: "Ignorer",
+  },
   it_IT: {
-    skip_intro: "Salta l'intro",
+    skip_intro: "Salta intro",
     next_epi: "Segue",
     skip_recap: "Salta riassunto",
     skip_ads: "Salta",
@@ -64,8 +79,8 @@ export const i18nMap = {
     skip_ads: "Hopp over",
   },
   pl_PL: {
-    skip_intro: "Pomiń wstęp",
-    next_epi: "Następny",
+    skip_intro: "Pomiń czołówkę",
+    next_epi: "Następny odcinek",
     skip_recap: "Pomiń podsumowanie",
     skip_ads: "Pomiń",
   },
@@ -77,7 +92,9 @@ export const i18nMap = {
   },
   de_DE: {
     next_epi: "Nächste",
+    next_epi_extra: "Nächste Folge",
     skip_intro: "Vorspann überspringen",
+    skip_intro_extra: "Intro überspringen",
     skip_recap: "Rückblick überspringen",
     skip_recap_extra: "Zusammenfassung überspringen",
     skip_ads: "Überspringen",
@@ -95,8 +112,8 @@ export const i18nMap = {
     skip_ads: "Hoppa",
   },
   tr_TR: {
-    next_epi: "Sıradaki",
-    skip_intro: "Jeneriği Atla",
+    next_epi: "Sonraki Bölüm",
+    skip_intro: "İntroyu Atla",
     skip_recap: "Özeti Atla",
   },
   ru_RU: {
@@ -135,6 +152,11 @@ export const i18nMap = {
     next_epi: "接著播放",
     skip_recap: "略過前集提要",
   },
+  zh_HK: {
+    skip_intro: "略過介紹",
+    next_epi: "下一集",
+    skip_recap: "略過前情提要",
+  },
   ko_KR: {
     skip_intro: "소개 건너뛰기",
     next_epi: "다음 영상",
@@ -146,10 +168,16 @@ export const i18nMap = {
     skip_recap: "要約をスキップ",
     skip_ads: "広告をスキップ",
   },
-   en_TR: {
+  en_TR: {
     next_epi: "Sonraki Bölüm",
     skip_intro: "İntroyu Atla",
     skip_recap: "Özeti Atla",
     skip_ads: "Atla",
+  },
+  hu_HU: {
+    next_epi: "Következő epizód",
+    skip_intro: "Főcím kihagyása",
+    skip_recap: "Összefoglaló kihagyása",
+    skip_ads: "Átugrás",
   },
 };
