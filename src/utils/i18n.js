@@ -2,11 +2,14 @@ export const SKIP_INTRO = "skip_intro";
 export const SKIP_RECAP = "skip_recap";
 export const NEXT_EPISODE = "next_epi";
 export const SKIP_ADS = "skip_ads";
+export const SKIP_CONTINUE_WATCHING_NETFLIX = "skip_continue_watching_netflix";
 
 export const LOADING_TEXT = "Skipping...";
 
 export const NETFLIX = "netflix";
 export const PRIME = "prime";
+export const HOTSTAR = "hotstar";
+export const JIOCINEMA = "jiocinema";
 
 export const i18nMap = {
   en_US: {
@@ -28,8 +31,8 @@ export const i18nMap = {
     skip_ads: "Saltar",
   },
   fr_FR: {
-    skip_intro: "Passer l'intro",
-    next_epi: "Suivant",
+    skip_intro: "Passer l'introduction",
+    next_epi: "Ép. suivant",
     skip_recap: "Passer le résumé",
     skip_ads: "Ignorer",
   },
@@ -64,7 +67,7 @@ export const i18nMap = {
     skip_ads: "Hopp over",
   },
   pl_PL: {
-    skip_intro: "Pomiń wstęp",
+    skip_intro: "Pomiń czołówkę",
     next_epi: "Następny",
     skip_recap: "Pomiń podsumowanie",
     skip_ads: "Pomiń",
