@@ -74,7 +74,7 @@ export const i18nMap = {
   },
   pl_PL: {
     skip_intro: "Pomiń czołówkę",
-    next_epi: "Następny",
+    next_epi: "Następny odcinek",
     skip_recap: "Pomiń podsumowanie",
     skip_ads: "Pomiń",
   },
