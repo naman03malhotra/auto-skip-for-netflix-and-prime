@@ -11,6 +11,8 @@ export const PRIME = "prime";
 export const HOTSTAR = "hotstar";
 export const JIOCINEMA = "jiocinema";
 
+
+// This is just for Amazon Prime, please don't use it for any other platform
 export const i18nMap = {
   en_US: {
     next_epi: "Next Up",
