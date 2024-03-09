@@ -31,22 +31,25 @@ export const elementMapping = [
     locale,
     skipEvent: SKIP_INTRO,
   },
-  {
-    type: NETFLIX,
-    selector:
-        "[data-uia='next-episode-seamless-button']",
-    locale,
-  },
+  // disabled it for now until I work on the UI
+
+  // {
+  //   type: NETFLIX,
+  //   selector:
+  //       "[data-uia='next-episode-seamless-button']",
+  //   locale,
+  // },
+
   // {
   //   type: NETFLIX,
   //   selector: "[aria-label='Skip Recap']",
   //   locale,
   // },
-  {
-    type: NETFLIX,
-    selector: "[data-uia='player-skip-recap']",
-    locale,
-  },
+  // {
+  //   type: NETFLIX,
+  //   selector: "[data-uia='player-skip-recap']",
+  //   locale,
+  // },
   {
     type: NETFLIX,
     selector: "[aria-label='Continue Playing']",
