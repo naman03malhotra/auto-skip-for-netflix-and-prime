@@ -22,15 +22,31 @@ export const elementMapping = [
   },
   {
     type: NETFLIX,
+    selector: "[data-uia='player-skip-intro']",
+    locale,
+  },
+  {
+    type: NETFLIX,
     selector: ".skip-credits > a",
     locale,
     skipEvent: SKIP_INTRO,
+  },
+  {
+    type: NETFLIX,
+    selector:
+        "[data-uia='next-episode-seamless-button']",
+    locale,
   },
   // {
   //   type: NETFLIX,
   //   selector: "[aria-label='Skip Recap']",
   //   locale,
   // },
+  {
+    type: NETFLIX,
+    selector: "[data-uia='player-skip-recap']",
+    locale,
+  },
   {
     type: NETFLIX,
     selector: "[aria-label='Continue Playing']",
