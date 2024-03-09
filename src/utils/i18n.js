@@ -31,8 +31,8 @@ export const i18nMap = {
     skip_ads: "Saltar",
   },
   fr_FR: {
-    skip_intro: "Passer l'intro",
-    next_epi: "Suivant",
+    skip_intro: "Passer l'introduction",
+    next_epi: "Ép. suivant",
     skip_recap: "Passer le résumé",
     skip_ads: "Ignorer",
   },
