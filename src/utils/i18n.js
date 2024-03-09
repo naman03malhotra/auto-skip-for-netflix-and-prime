@@ -168,9 +168,16 @@ export const i18nMap = {
     skip_recap: "要約をスキップ",
     skip_ads: "広告をスキップ",
   },
+  en_TR: {
+    next_epi: "Sonraki Bölüm",
+    skip_intro: "İntroyu Atla",
+    skip_recap: "Özeti Atla",
+    skip_ads: "Atla",
+  },
   hu_HU: {
     next_epi: "Következő epizód",
     skip_intro: "Főcím kihagyása",
     skip_recap: "Összefoglaló kihagyása",
     skip_ads: "Átugrás",
+  },
 };
